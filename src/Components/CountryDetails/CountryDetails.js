@@ -13,8 +13,6 @@ const CountryDetails = () => {
             .then(data => setCountry(data[0]))
     }, [countryName])
     const { name, capital, flag, region, population, area, timezones, callingCodes, topLevelDomain, currencies } = country;
-    console.log(country);
-
     return (
         <div className="fluid">
             <div className="container text-center">

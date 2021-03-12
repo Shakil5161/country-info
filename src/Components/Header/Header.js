@@ -24,7 +24,7 @@ const Header = () => {
           <Form inline>
             {/* <FormControl onChange={handleChange} type="text" placeholder="Search Your Country" className="mr-sm-2" />
             <Link to={"/search/"+search}><Button variant="outline-success">Search</Button></Link> */}
-            <InputGroup required="required" className="m-2">
+            <InputGroup className="m-2">
               <FormControl
                 required="required"
                 onChange={handleChange}

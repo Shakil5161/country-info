@@ -11,7 +11,6 @@ const SearchCountry = () => {
         .then(res => res.json())
         .then(data => setCountry(data))
       },[searchCountry]);
-    console.log('search country',country);
     return (
         <div>
             {
