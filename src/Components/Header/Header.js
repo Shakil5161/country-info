@@ -5,8 +5,9 @@ import './Header.css';
 const Header = () => {
   const [search, setSearch] = useState('');
   const handleChange = event => {
-    console.log(event.target.value);
-    setSearch(event.target.value);
+    let searchValue = event.target.value;
+    console.log(searchValue);
+    setSearch(searchValue);
   }
   return (
     <div >
@@ -33,7 +34,11 @@ const Header = () => {
                 aria-describedby="basic-addon2"
               />
               <InputGroup.Append>
-                <Link to={"/search/" + search}><Button variant="outline-secondary">Search</Button></Link>
+              {
+                search === ""?<Link to={"/"}><Button variant="outline-secondary">Search</Button></Link> 
+                :<Link to={"/search/" + search}><Button variant="outline-secondary">Search</Button></Link>
+              }
+                
               </InputGroup.Append>
             </InputGroup>
           </Form>
